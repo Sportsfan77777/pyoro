@@ -9,8 +9,15 @@ import java.awt.image.*;
 import javax.imageio.*;
 import java.awt.Toolkit;
 
+/**
+ * Pyoro GUI
+ * @author Sportsfan77777
+ *
+ */
 public class Grid extends JPanel implements ActionListener
 {
+	// Right now, this is not just the GUI
+	// It includes other things that should be elsewhere
     private FruitCollection fruitC;
     private Bird pyoro;
     private Platform plat;
@@ -156,13 +163,21 @@ public class Grid extends JPanel implements ActionListener
       g.dispose();
     }
     
+    /** advances the game state (both internal and graphical)
+     * 
+     */
     public void actionPerformed(ActionEvent e)
     {
+      // javadoc not directed at user? make private?
       if (pyoro.died())
       {
         ingame = false;
       }
       
+      // Determine rate at which to drop fruit
+      // The higher the score, the more fruit will be dropped
+      // Note: also depends on TIMER_TIME if this needs to be
+      //       changed for whatever reason
       int max = 60000;
       int denom = 100 * TIMER_TIME / 15;
       int num = denom - 1;
@@ -201,6 +216,9 @@ public class Grid extends JPanel implements ActionListener
       repaint();
     }
     
+    /**
+     * 
+     */
     public void checkCollisions()
     {
       Tongue t = pyoro.getTongue();
@@ -240,6 +258,10 @@ public class Grid extends JPanel implements ActionListener
       }
     }
 
+    /**
+     * handler for key presses
+     * @param e keyboard event
+     */
     public void keyPressed(KeyEvent e)
     {
       int key = e.getKeyCode();

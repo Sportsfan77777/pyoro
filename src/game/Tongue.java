@@ -8,6 +8,11 @@ import java.awt.event.*;
 import java.awt.image.*;
 import javax.imageio.*;
 
+/**
+ * Tongue of the Bird
+ * @author Sportsfan77777
+ *
+ */
 public class Tongue
 {
 	private boolean launched; // only if launched, tongue will be seen
@@ -81,6 +86,10 @@ public class Tongue
     public Rectangle getRectangle()
     {    return new Rectangle(x2, y2, width, height);    }
 
+    /**
+     * launch the tongue so the bird can eat
+     * @param b
+     */
     public void launch(Bird b)
     {    
       launched = true;
@@ -112,6 +121,10 @@ public class Tongue
       }
     }
 
+    /**
+     * retract the tongue, so that it can be launched again
+     * in the future
+     */
     public void retract()
     {    
       launched = false;
@@ -122,6 +135,10 @@ public class Tongue
     public boolean getLaunched()
     {    return launched;    }
 
+    /**
+     * move tongue with physics (neglect gravity)
+     * @param b
+     */
     public void move(Bird b)
     {
  /*     if /*((y2 - b.getYcor() < Grid.getGHeight()) || 

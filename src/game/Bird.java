@@ -9,6 +9,11 @@ import java.awt.image.*;
 import java.awt.Toolkit;
 import javax.imageio.*;
 
+/**
+ * The Bird creature that eats and dodges falling fruit
+ * @author Sportsfan77777
+ *
+ */
 public class Bird
 {
 	private Grid grid;
@@ -98,7 +103,11 @@ public class Bird
       height = img.getHeight(null);
       width = img.getWidth(null);
     }
+    
 
+    /**
+     * sets graphical image of bird
+     */
     public void setDirection()
     {
       if (!facingRight && tongue.getLaunched() && dx == 0) {
@@ -175,6 +184,13 @@ public class Bird
       }
     }
     
+    /**
+     * handler for key releases
+     * space = retract tongue
+     * left = stop moving left
+     * right = stop moving right
+     * @param e
+     */
     public void keyReleased(KeyEvent e)
     {
       int key = e.getKeyCode();

@@ -8,6 +8,11 @@ import java.awt.event.*;
 import java.awt.image.*;
 import javax.imageio.*;
 
+/**
+ * collection of all of the fruit in the game
+ * @author Sportsfan77777
+ *
+ */
 public class FruitCollection
 {
     private ArrayList<Fruit> fruits;

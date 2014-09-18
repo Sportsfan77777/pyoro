@@ -8,7 +8,11 @@ import java.awt.event.*;
 import java.awt.image.*;
 import javax.imageio.*;
 
-
+/**
+ * the platform on which the Bird stands
+ * @author Sportsfan77777
+ *
+ */
 public class Platform
 {
     private boolean[] platform; // 0 = destroyed, 1 = still there

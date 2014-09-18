@@ -8,6 +8,12 @@ import java.awt.event.*;
 import java.awt.image.*;
 import javax.imageio.*;
 
+/**
+ * the fruit that will be eaten or dodged
+ * (or it could kill the bird)
+ * @author Sportsfan77777
+ *
+ */
 public class Fruit
 {
     private Random R;
@@ -40,6 +46,9 @@ public class Fruit
     	else speed = 5;
     }
 
+    /**
+     * sets Fruit Type (normal, bonus, or super-bonus)
+     */
     public void setIdentity()
     {
       xcor = R.nextInt(Grid.getGWidth() - 30);
@@ -96,6 +105,9 @@ public class Fruit
       width = img.getWidth(null);
     }
     
+    /**
+     * remove fruit from existence (eaten or hit ground)
+     */
     public void resetFruit()
     {
       onscreen = false;
@@ -124,11 +136,17 @@ public class Fruit
       return onscreen;
     }
     
+    /**
+     * drop the fruit
+     */
     public void drop()
     {
       onscreen = true;
     }
 
+    /**
+     * move fruit with physics (neglect gravity)
+     */
     public void move()
     {
   /*    if (ycor > Grid.getGHeight())
