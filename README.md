@@ -3,8 +3,8 @@ This is a copy of the Pyoro game which can be found on the internet on a variety
 websites. (e.g. http://jayisgames.com/games/pyoro/, http://www.freeonlinegames.com/game/pyoro, 
 I cannot find the original source of the game. It is not me. I did not design this game.)
 
-In Pyoro, my interpretation you are a bird trying to survive a dangerous forest filled with
-tasty, but dangerous fruit falling from the sky. The only way to survive is to eat the fruit
+In Pyoro, my interpretation is thatyou are a bird trying to survive a dangerous forest filled
+with tasty, but dangerous fruit falling from the sky. The only way to survive is to eat the fruit
 falling from the sky. If you don't eat the fruit, it will destroy some of your platform or
 land on your head. If a fruit lands on your head, you die and the game is over.
 If the fruit doesn't kill you, but it destroys some of your platform, this is bad
